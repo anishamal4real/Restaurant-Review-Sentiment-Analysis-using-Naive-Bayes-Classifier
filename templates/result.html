@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restaurant Review Sentiment Analyser</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='result.jpg') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background: url("{{ url_for('static', filename='result.gif') }}");
+        background-size: cover ;
+        color: black;
+    }
+   
+</style>
+
+<body>
+
+    <!-- Result -->
+    <div class="results">
+        {% if prediction==1 %}
+        <h1>Prediction: <span class='safe'>This is a Positive Review. </span> Thank you. </h1>
+        <img class="gif" src="{{ url_for('static', filename='happy.jpg') }}" alt="Positive Review" style="width:128px;height:128px;"> 
+        {% elif prediction==0 %}
+        <h1>Prediction: <span class='danger'>This is a Negative Review.</span> Sorry </h1>
+        <img class="gif" src="{{ url_for('static', filename='sad.jpg') }}" alt="Negative Review" style="width:128px;height:128px;"> 
+        {% endif %}
+    </div>
+
+    
+</body>
+
+</html>

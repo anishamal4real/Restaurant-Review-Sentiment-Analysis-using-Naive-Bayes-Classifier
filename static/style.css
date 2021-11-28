@@ -1,0 +1,163 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: url("{{ url_for('static', filename='burgerking.jpg') }}");
+    background-size: cover;
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left {
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 18px;
+    color: white;
+    font-family: 'Potta One', cursive;
+}
+
+.center {
+    display: block;
+    width: 33%;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+.right {
+    display: inline-block;
+    position: absolute;
+    right: 34px;
+    top: 20px;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 30px 23px;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    text-decoration: underline;
+    color: grey;
+}
+
+.left img {
+    width: 50px;
+    filter: invert(100%);
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.left div {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.btn {
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid black;
+    border-radius: 2px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Potta One', cursive;
+}
+
+.btn:hover {
+    background-color: rebeccapurple;
+}
+
+
+/* Text Area */
+
+.ml-container {
+    margin: 30px 0;
+    flex: 1 0 auto;
+}
+
+.message-box {
+    margin-bottom: 20px;
+    color: blue;
+}
+
+
+/* Predict Button */
+
+.my-cta-button {
+    background: #f9f9f9;
+    border: 2px solid #810707;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+    padding: 10px 36px;
+    color: #000000;
+    display: inline-block;
+    font: bold 20px;
+    font-family: 'Potta One', cursive;
+    text-align: center;
+}
+
+.my-cta-button:hover {
+    color: #4d089a;
+    border: 2px solid #4d089a;
+}
+
+.my-cta-button:active {
+    box-shadow: 0 0;
+}
+
+
+/* Footer */
+
+.footer {
+    font-size: 14px;
+    padding: 20px;
+    flex-shrink: 0;
+    position: relative;
+    background: linear-gradient(45deg, #ffffff, #ffffff, #f9f9f9, #eeeeee, #e0e4e1, #d7e1ec);
+    background-size: 500% 500%;
+    animation: change-gradient 10s ease-in-out infinite;
+}
+
+
+/* Result */
+
+.results {
+    padding: 30px 0 0;
+    flex: 1 0 auto;
+}
+
+.danger {
+    color: #ff0000;
+    font-family: 'Potta One', cursive;
+    font-size: large;
+}
+
+.safe {
+    color: green;
+    font-family: 'Potta One', cursive;
+    font-size: large;
+}
